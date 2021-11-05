@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage[top= 27mm, bottom=27mm, left=25mm, right=25mm]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage[english, serbian]{babel}
+
+\usepackage{float}
+\usepackage{booktabs,hhline}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[T1]{fontenc}
+\usepackage{dirtytalk}
+\usepackage{multicol}
+
+\pagenumbering{arabic}
+
+\usepackage{graphicx}
+\graphicspath{ {./Pictures/} }
+
+\usepackage[unicode]{hyperref}
+\hypersetup{
+    colorlinks = true,
+    linktoc = all,    
+    linkcolor = blue,
+}
+
+\renewcommand{\contentsname}{Sadržaj}
+\renewcommand{\figurename}{Slika}
+
+\begin{document}
+
+\input{Sections/0_index}
+
+\newpage
+\begin{abstract}
+\end{abstract}
+\thispagestyle{empty}
+\tableofcontents
+
+\newpage
+\input{Sections/1_intro}
+\newpage
+\input{Sections/2_system_analysis}
+\newpage
+\input{Sections/3_use_cases}
+
+\end{document}
