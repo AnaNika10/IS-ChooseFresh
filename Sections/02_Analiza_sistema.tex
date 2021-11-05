@@ -1,0 +1,38 @@
+
+\section{Analiza sistema}
+
+	U sklopu poslovanja ne spada samo dostava namirnica do krajnjeg korisnika već i nabavka namirnica od snabdevača i njihovo skladištenje po magacinima. U nastavku opisujemo aktere koje prepoznajemo i koje su njihove uloge u sistemu.
+	%angažovanje potrebnih vozila za nabavku namirnica od snabdevača i njihovo skladištenje po magacinima, dostava namirnica, naplaćivanje pretplate korisnika, potraga za snabdevačima i sklapanje ugovora sa njima.
+\subsection{Akteri}
+	\begin{itemize}
+		\item{\textbf{Korisnik}} - korisnik može naručiti određen broj obroka po nedelji u skladu sa njegovom izabranom ishranom. Naručivanje obroka se vrši preko veb aplikacije i moguće je izmeniti odabir obroka do određenog dana u nedelji. U zavisnosti od broja obroka po nedelji i odabrane količine namirnica formira se plan na koji se korisnik pretplaćuje. Korisnik je takođe u mogućnosti da preskoči naručivanje obroka za neku od narednih nedelja. Uz svaki obrok dostavljaju se i recepti za obrok, napisani korak po korak.
+		\item{\textbf{Dostavljač}} - preuzima paket sa identifikacionim brojem na osnovu kog dobija informacije kome i gde treba da dostavi paket sa namirnicama.
+		\item{\textbf{Magacioner}} - pakuje pakete koji treba da se dostave u toku nedelje. Prima dostavljene namirnice i raspoređuje ih po magacinu.
+		\item{\textbf{Dobavljač}} - zadužen je za kontrolu magacina, koliko i kojih namirnica dolazi i odlazi iz magacina. U slučaju nedostatka određenih namirnica mora da kontaktira snabdevače kako bi ih nabavio.
+		\item{\textbf{Snabdevač}} - proizvodi određene namirnice i u obavezi je da dostavi dobavljaču određenu količinu namirnica na njegov zahtev.
+		% osoba koja objavljuje konkurs za snabdevače i sklapa ugovor sa budućim snabdevačima. 
+	\end{itemize}
+\subsection{Dijagram konteksta}
+	%Od aktera sa sistemom interaguju: korisnik, dobavljac, snabdevac, magacioner, dostavljac, banka, HR. Od Skladista podataka imamo bazu podataka (D), ugovore o saradnji (M).
+	% UBACITI DIJAGRAM
+\subsection{Dijagram toka podataka}
+	% UBACITI DIJAGRAM
+	\textbf{Registrovanje korisnika i odabir plana}: korisniku se pri registraciji određuje plan na koji se pretplaćuje i obavezan je postupak kako bi mogao da pristupi uslugama aplikacije. Registraciju obavlja sam i kao odgovor dobija poruku da li se uspešno registrovao ili ne.
+	
+	\textbf{Login korisnika}: Da bi korisnik mogao da pristupi aplikaciji mora biti prijavljen.
+		
+	\textbf{Odabir obroka}: Korisnik bira obroke za narednu nedelju i potvrđuje svoj odabir.
+	
+%	\textbf{Login dostavljača}: Dostavljač mora da se prijavi kako bi mogao da pristupi aplikaciji.
+	
+	\textbf{Dostava paketa}: Dostavljač mora biti prijavljen da bi mogao da dobije informacije o paketu koji treba da dostavi. 
+	
+%	\textbf{Login dobavljača}: Dobavljač mora da se prijavi kako bi mogao da pristupi aplikaciji.
+	
+	\textbf{Poručivanje namirnica}: Dobavljač pri prijavi na sistem dobija informacije o narudžbinama koje prosleđuje magacionerima. Od magacionera može da dobije obaveštenje da li fali neki proizvod i dobavljač tada kontaktira snabdevače da organizuje prevoz robe do magacina. 
+	
+	\textbf{Pakovanje paketa}: Magacioner dobija spisak nespakovanih porudžbina i bira jednu. Pakuje potrebne namirnice i obeležava paket identifikacionim brojem, zatim preuzima sledeću narudžbinu.
+	
+	\textbf{Isporučivanje namirnica}: Snabdevači su obavezi da isporuče određen proizvod u određenoj količini na zahtev dobavljača. Ako nema traženog proizvoda, obaveštava dobavljača.
+	% dodati proces registracije snabdevača (sklapanje ugovora)
+	
