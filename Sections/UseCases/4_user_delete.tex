@@ -1,0 +1,33 @@
+\subsection{Brisanje korisničkog naloga}
+
+\begin{itemize}
+    \item Kratak opis:
+        \begin{itemize}
+            \item Korisnik briše svoj nalog i prestaje sa korišćenjem aplikacije.
+        \end{itemize}
+    \item Učesnici:
+        \begin{itemize}
+            \item Registrovani korisnik HelloFresh aplikacije.
+        \end{itemize}
+    \item Preduslovi:
+        \begin{itemize}
+            \item Korisnik mora da bude prijavljen.
+        \end{itemize}
+    \item Postuslovi:
+        \begin{itemize}
+            \item Korisnik je uspešno obrisao svoj nalog.
+            \item Naplaćena su preostala dugovanja proistekla iz korišćenja aplikacije.
+        \end{itemize}
+    \item Glavni tok:
+        \begin{enumerate}
+            \item Korisnik pristupa veb stranici i otvara formu za brisanje naloga.
+            \item Korisnik unosi šifru i potvrdjuje da želi da obriše nalog.
+            \item Sistem proverava tačnost podataka i vrši naplatu preostalih dugovanja.
+            \item Sistem uklanja korisnika i sve njegove podatke iz sistema.
+        \end{enumerate}
+    \item Alternativni tok:
+        \begin{itemize}
+            \item[2.a] Korisnik odustaje od brisanja naloga. Slučaj upotrebe se završava.
+			\item[3.a] Ukoliko korisnik ne unese validne podatke sistem ga obaveštava o greški prilikom brisanja. Slučaj upotrebe se nastavlja od koraka 2.
+        \end{itemize}
+\end{itemize}
