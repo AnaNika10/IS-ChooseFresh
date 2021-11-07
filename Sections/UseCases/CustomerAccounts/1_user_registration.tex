@@ -1,0 +1,35 @@
+\subsubsection{Registrovanje korisnika}
+
+\begin{itemize}
+    \item Kratak opis:
+        \begin{itemize}
+            \item Korisnik se kroz aplikaciju registruje kako bi mogao da koristi usluge HelloFresh.
+        \end{itemize}
+    \item Učesnici:
+        \begin{itemize}
+            \item Zainteresovana osoba koja želi da koristi usluge HelloFresh aplikacije.
+        \end{itemize}
+    \item Preduslovi:
+        \begin{itemize}
+            \item Email adresa korisnika ne postoji u sistemu.
+        \end{itemize}
+    \item Postuslovi:
+        \begin{itemize}
+            \item Osoba je registrovana kao aktivni korisnik HelloFresh aplikacije.
+        \end{itemize}
+    \item Glavni tok:
+        \begin{enumerate}
+            \item Korisnik pristupa veb stranici i otvara formu za registraciju.
+            \item Korisnik unosi svoju email adresu i zeljenu lozinku.
+            \item Korisnik potvrdjuje svoju registraciju.
+            \item Sistem vrši validaciju registracije.
+            \item Sistem pamti unetu registraciju.
+            \item Sistem omogućava korisniku prijavljivanje.
+        \end{enumerate}
+    \item Alternativni tok:
+        \begin{itemize}
+            \item[3.a] Korisnik odustaje od registracije. Slučaj upotrebe se završava.
+            \item[4.a] Ukoliko je korisnik odabrao korisničko ime koje već postoji u sistemu, prikazuje se odgovarajuća poruka. Slučaj upotrebe se nastavlja od koraka 2.
+            \item[4.b] Ukoliko je korisnik odabrao lozinku koja ne odgovara specifikacijama sistema (prekratka), prikazuje se odgovarajuća poruka. Slučaj upotrebe se nastavlja od koraka 2.
+        \end{itemize}
+\end{itemize}

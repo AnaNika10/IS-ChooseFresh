@@ -1,0 +1,66 @@
+\subsubsection{Raskid ugovora na zahtev snabdevača}
+
+\begin{itemize}
+    \item Kratak opis:
+        \begin{itemize}
+            \item Snabdevač inicira raskid ugovora.
+        \end{itemize}
+    \item Učesnici:
+        \begin{itemize}
+            \item Registrovani snabdevač HelloFresh aplikacije.
+            \item Inspektor kao predstavnik HelloFresh kompanije
+        \end{itemize}
+    \item Preduslovi:
+        \begin{itemize}
+            \item Snabdevač mora da bude prijavljen.
+            \item Snabdevač mora da poseduje važeći ugovor o radu sa HelloFresh kompanijom.
+        \end{itemize}
+    \item Postuslovi:
+        \begin{itemize}
+            \item Uspešno je raskinut ugovor izmedju snabdevača i HelloFresh kompanije
+            \item Snabdevač prestaje se uslugom dostavljanja namirnica.
+            \item Nalog snabdevača je uklonjen iz sistema.
+        \end{itemize}
+    \item Glavni tok:
+        \begin{enumerate}
+            \item Snabdevač pristupa veb stranici i potvrdjuje raskid ugovora.
+            \item Sistem obradjuje zahtev za raskid ugovora i obaveštava nekog od inspektora.
+            \item Inspektor obavlja razgovor sa snabdevačem i vrši raskid ugovora.
+            \item Sistem uklanja snabdevača iz spiska dostupnih snabdevača i iz sistema.
+        \end{enumerate}
+    \item Alternativni tok:
+        \begin{itemize}
+            \item[1.a] Korisnik odustaje od raskida ugovora. Slučaj upotrebe se završava.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Raskid ugovora na zahtev HelloFresh kompanije}
+
+\begin{itemize}
+    \item Kratak opis:
+        \begin{itemize}
+            \item Kompanija HelloFresh inicira raskid ugovora sa snabdevačem.
+        \end{itemize}
+    \item Učesnici:
+        \begin{itemize}
+            \item Snabdevač HelloFresh aplikacije.
+            \item Inspektor kao predstavnik HelloFresh kompanije.
+        \end{itemize}
+    \item Preduslovi:
+        \begin{itemize}
+            \item Snabdevač mora da poseduje važeći ugovor o radu sa HelloFresh kompanijom.
+            \item Snabdevač je prekršio neku od klauzula ugovora.
+        \end{itemize}
+    \item Postuslovi:
+        \begin{itemize}
+            \item Uspešno je raskinut ugovor izmedju snabdevača i HelloFresh kompanije
+            \item Snabdevač prestaje se uslugom dostavljanja namirnica.
+            \item Nalog snabdevača je uklonjen iz sistema.
+        \end{itemize}
+    \item Glavni tok:
+        \begin{enumerate}
+            \item Inspektor uočava da je snabdevač prekršio uslove ugovora ili je ocena korisnika za datog snabdevača ispod granice.
+            \item Inspektor vrši raskid ugovora i obaveštava snabdevača o raskidu.
+            \item Sistem uklanja snabdevača iz spiska dostupnih snabdevača i iz sistema.
+        \end{enumerate}
+\end{itemize}
