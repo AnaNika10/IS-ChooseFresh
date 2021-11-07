@@ -1,14 +1,7 @@
 
 
-\subsubsection{Pravljenje narudžbine za snabdevače}
-\begin{figure}[H]
-\begin{center}
-\includegraphics[width=\textwidth]{uc_diagram_groceries_supply.jpg}
+\subsubsection{Naručivanje namirnica od snabdevača}
 
-    \caption{Dijagram slučaja nabavke namirnica}
-    \end{center}
-\label{fig:Uc_diagram_groceries_supply}
-\end{figure}
 
 \begin{itemize}
 	\item Kratak opis:
@@ -35,12 +28,12 @@
            \item Koordinator pravi spisak svega sto nedostaje u magacinu.
             \item Koordinator traži u bazi podataka snabdevače koji u svojoj ponudi nudi proizvode koji nedostaju.
              \item  Koordiantor kontakira sa snabdevača čija ponuda pokriva nedostajuće namernice.
-            \item Snabdevač prihvata porudžbinu.
+            \item Snabdevač prihvata porudžbinu i šalje je do magacina.
 		\end{enumerate}
 	\item Alternativni tok:
 		\begin{itemize}
 		    \item Korak 2 - Ukoliko su sve potrebne namirnice dostupne u magacinu koordinator se vraća na korak 1 sledeće nedelje.
-		    \item Korak 4 - Ako ne postoji samo jedan snabdevač koji može da obezbedi sve namirnice koordinator stupa u kontakt sa sledećim snabdevačem. Ovaj korak obavlja dokle god ne pronadje sve potrebne namirnice.
+		    \item Korak 4 - Ako ne postoji samo jedan snabdevač koji može da obezbedi sve namirnice koordinator stupa u kontakt sa sledećim snabdevačem. \textit{Ovaj korak obavlja dokle god ne pronadje sve potrebne namirnice.}
 		\end{itemize}
 \end{itemize}
 
@@ -48,6 +41,6 @@
 \begin{center}
 \includegraphics[width=\textwidth]{activity_diagram_order_placment_for_groceries.jpg}
 \end{center}
-    \caption{Dijagram aktivnosti - Pravljenje narudžbine za snabdevače}
+    \caption{Dijagram aktivnosti - Naručivanje namirnica od snabdevača}
 \label{fig:Activity_diagram_order_placment_for_groceries}
 \end{figure}
