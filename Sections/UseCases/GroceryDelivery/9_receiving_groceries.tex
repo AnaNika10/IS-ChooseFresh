@@ -7,24 +7,24 @@
 		- Magacioner prihvata dostigle namirnice i raspoređuje ih u magacinu
 		\item{Učesnici:} 
 		
-		- Dobavljač, magacioner
+		- Koordinator, magacioner
 		\item{Preduslovi:}
 		
-		- Magacioner i dobavljač su prijavljeni na sistem.
+		- Magacioner i koordinator su prijavljeni na sistem.
 		\item{Postuslovi:}
 		
 		- Sve dostigle namirnice su raspoređene u magacinu i baza podataka je ažurirana.
 		\item{Osnovni tok:}
 		\begin{enumerate}
-			\item{Dobavljač obaveštava magacionera o vremenu isporuke poručenih namirnica i njihovoj količini.}
+			\item{Koordinator obaveštava magacionera o vremenu isporuke poručenih namirnica i njihovoj količini.}
 			\item{Kamion sa poručenim namirnicama dolazi do magacina.}
 			\item{Magacioner proverava spisak dostiglih namirnica i njihovu količinu sa listom poručenih namirnica:}
 			\begin{enumerate}
 			\item{Ako se spiskovi ne poklapaju, izvršava se podtok P1.}
 			\end{enumerate}
 			\item{Magacioner raspoređuje namirnice po magacinu.}
-			\item{Magacioner obaveštava dobavljača da je završen prijem namirnica i šalje mu spisak primljenih namirnica.}
-			\item{Dobavljač ažurira bazu podataka u skladu sa spiskom primljenih namirnica.}
+			\item{Magacioner obaveštava koordinatora da je završen prijem namirnica i šalje mu spisak primljenih namirnica.}
+			\item{Koordinator ažurira bazu podataka u skladu sa spiskom primljenih namirnica.}
 		\end{enumerate}
 		
 		\item{Podtokovi:}
