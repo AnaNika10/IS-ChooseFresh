@@ -10,17 +10,25 @@
 
 	\begin{itemize}
 		\item{Kratak opis:} 
+		\begin{itemize}
+			\item{Dostavljač dobija informacije o paketu od sistema i dostavlja paket korisniku.}
+		\end{itemize}
 		
-		- Dostavljač dobija informacije o paketu od sistema i dostavlja paket korisniku.
 		\item{Učesnici:} 
+		\begin{itemize}
+			\item{Dostavljač, korisnik}
+		\end{itemize}		
 		
-		- Dostavljač, korisnik
 		\item{Preduslovi:}
-		
-		- Dostavljač je prijavljen na sistem i ima nedostavljenih paketa. Korisnik je na registrovanoj adresi u vreme dostave.
+		\begin{itemize}
+			\item{Dostavljač je prijavljen na sistem i ima nedostavljenih paketa. }
+		\end{itemize}		
+
 		\item{Postuslovi:}
+		\begin{itemize}
+			\item{Korisnik dobija svoj paket sa namirnicama.}
+		\end{itemize}		
 		
-		- Korisnik dobija svoj paket sa namirnicama
 		\item{Osnovni tok:}
 		\begin{enumerate}
 			\item{Dostavljač dobija obaveštenje od sistema da ima nedostavljenih paketa.}
@@ -35,9 +43,13 @@
 		
 		\item{Alternativni tokovi:}
 			\begin{enumerate}
-				\item[A1.] \textbf{Dostavljač kasni sa dostavom.} Ukoliko u koraku 4 				dostavljač proceni da će kasniti, obaveštava korisnika pomoću sistema.
-%				\item[A2.] \textbf{Korisnik se trenutno ne nalazi na naznačenoj adresi.} Ukoliko u koraku 5 korisnik nije na naznačenoj adresi, dostavljač beleži da je dostava neuspela i vraća paket u magacin. Sistem obaveštava korisnika da dostavljač nije uspeo da dostavi paket i traži od korisnika da potvrdi svoju adresu. Ako je korisnik promenio adresu, sistem ga navodi na opciju ažuriranja naloga.  
+				\item[4.a] Ukoliko dostavljač proceni da će kasniti, obaveštava korisnika pomoću sistema.
+				\item[5.a] Ukoliko korisnik nije na naznačenoj adresi, dostavljač ostavlja paket ispred ulaza. Slučaj upotrebe se nastavlja od koraka 6.%Sistem obaveštava korisnika da dostavljač nije uspeo da dostavi paket i traži od korisnika da potvrdi svoju adresu. Ako je korisnik promenio adresu, sistem ga navodi na opciju ažuriranja naloga.  
 			\end{enumerate}
+		\item{Dodatne informacije:}
+			\begin{itemize}
+				\item{Spisak nedostavljenih paketa je sortiran rastuće po vremenu dostave.}
+			\end{itemize}
 	\end{itemize}
 	
 \begin{figure}[H]
