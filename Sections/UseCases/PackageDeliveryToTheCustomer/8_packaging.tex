@@ -2,25 +2,41 @@
 \subsubsection{Pakovanje porudžbina}
 	\begin{itemize}
 		\item{Kratak opis:} 
+		\begin{itemize}
+			\item{Magacioner pakuje porudžbine u pakete za isporuku.}
+		\end{itemize}
 		
-		- Magacioner pakuje porudžbine u pakete za isporuku.
 		\item{Učesnici:} 
-		
-		- Magacioner
+		\begin{itemize}
+			\item{Magacioner}
+		\end{itemize}		
+
 		\item{Preduslovi:}
+		\begin{itemize}
+			\item{Magacioner je prijavljen na sistem i ima neupakovanih porudžbina. U magacinu ima dovoljno potrebnih namirnica da se upakuju sve porudžbine.}
+		\end{itemize}
 		
-		- Magacioner je prijavljen na sistem i ima neupakovanih porudžbina. U magacinu ima dovoljno potrebnih namirnica da se upakuju sve porudžbine.
 		\item{Postuslovi:}
+		\begin{itemize}
+			\item{Nema neupakovanih porudžbina.}
+		\end{itemize}
 		
-		- Nema neupakovanih porudžbina.
 		\item{Osnovni tok:}
 		\begin{enumerate}
 			\item{Magacioner proverava listu neupakovanih porudžbina.}
 			\item{Magacioner preuzima jednu porudžbinu i beleži to u sistemu.}
-			\item{Magacioner pakuje paket i obeležava ga identifikacionim brojem koji dobija na osnovu sistema.}
+			\item{Sistem štampa identifikacioni broj porudžbine.}
+			\item{Magacioner pakuje paket i obeležava ga identifikacionim brojem.}
 			\item{Magacioner beleži da je završio pakovanje porudžbine i da je paket spreman za dostavu.}
+			\item{Sistem ažurira stanje zaliha u magacinu na osnovu spiska porudžbine.}
+			\item{Sistem bira spisak nedostavljenih paketa određenog dostavljača i ažurira ga.}
 
-			\textit{Koraci 1-4 se ponavljaju sve dok ima nedostavljenih paketa.}
+
+			\textit{Koraci 1-6 se ponavljaju sve dok ima nedostavljenih paketa.}
 		\end{enumerate}
+		\item{Dodatne informacije:}
+		\begin{itemize}
+			\item{Identifikacioni broj porudžbine se automatski generiše pri konstrukciji porudžbine u sistemu.}
+		\end{itemize}
 
 	\end{itemize}
