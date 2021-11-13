@@ -2,7 +2,7 @@
 \section{Analiza sistema}
 
 	U sklopu poslovanja ne spada samo dostava namirnica do krajnjeg korisnika već i nabavka namirnica od snabdevača i njihovo skladištenje po magacinima. U nastavku opisujemo aktere koje prepoznajemo i koje su njihove uloge u sistemu.
-	%angažovanje potrebnih vozila za nabavku namirnica od snabdevača i njihovo skladištenje po magacinima, dostava namirnica, naplaćivanje pretplate korisnika, potraga za snabdevačima i sklapanje ugovora sa njima.
+	%njihovo skladištenje po magacinima, dostava namirnica, naplaćivanje pretplate korisnika, potraga za snabdevačima i sklapanje ugovora sa njima.
 \subsection{Akteri}
 	\begin{itemize}
 		\item{\textbf{Korisnik}} - korisnik može naručiti određen broj obroka po nedelji u skladu sa njegovom izabranom ishranom. Naručivanje obroka se vrši preko veb aplikacije i moguće je izmeniti odabir obroka do određenog dana u nedelji. U zavisnosti od broja obroka po nedelji i odabrane količine namirnica formira se plan na koji se korisnik pretplaćuje. Korisnik je takođe u mogućnosti da preskoči naručivanje obroka za neku od narednih nedelja. Uz svaki obrok dostavljaju se i recepti za obrok, napisani korak po korak.
@@ -10,12 +10,14 @@
 		\item{\textbf{Magacioner}} - pakuje pakete koji treba da se dostave u toku nedelje. Prima dostavljene namirnice i raspoređuje ih po magacinu.
 		\item{\textbf{Koordinator}} - zadužen je za kontrolu magacina, koliko i kojih namirnica dolazi i odlazi iz magacina. U slučaju nedostatka određenih namirnica mora da kontaktira snabdevače kako bi ih nabavio.
 		\item{\textbf{Snabdevač}} - proizvodi određene namirnice i u obavezi je da dostavi koordinatoru određenu količinu namirnica na njegov zahtev.
-		% osoba koja objavljuje konkurs za snabdevače i sklapa ugovor sa budućim snabdevačima. 
+		% Predstavnik - osoba koja objavljuje konkurs za snabdevače i sklapa ugovor sa budućim snabdevačima. 
+		% Kuvar - formira recepte koji ce se prikazivati korisnicima svake nedelje u zavisnosti od tipa ishrane
 	\end{itemize}
-\subsection{Dijagram konteksta}
-	%Od aktera sa sistemom interaguju: korisnik, dobavljac, snabdevac, magacioner, dostavljac, banka, HR. Od Skladista podataka imamo bazu podataka (D), ugovore o saradnji (M).
-	% UBACITI DIJAGRAM
 \subsection{Dijagram toka podataka}
+
+	% Dijagram konteksta
+%	Od aktera sa sistemom interaguju: korisnik, dobavljac, snabdevac, magacioner, dostavljac, banka, HR. Od Skladista podataka imamo bazu podataka (D), ugovore o saradnji (M).
+	% UBACITI DIJAGRAM
 	% UBACITI DIJAGRAM
 	\textbf{Registrovanje korisnika i odabir plana}: korisniku se pri registraciji određuje plan na koji se pretplaćuje i obavezan je postupak kako bi mogao da pristupi uslugama aplikacije. Registraciju obavlja sam i kao odgovor dobija poruku da li se uspešno registrovao ili ne.
 	
