@@ -3,38 +3,45 @@
 
 	\begin{itemize}
 		\item{Kratak opis:} 
-		
-		- Magacioner prihvata dostigle namirnice i raspoređuje ih u magacinu
+		\begin{itemize}
+			\item{Magacioner prihvata dostigle namirnice i raspoređuje ih u magacinu}
+		\end{itemize}
 		\item{Učesnici:} 
+		\begin{itemize}
+			\item{Koordinator, magacioner}
+		\end{itemize}		
 		
-		- Koordinator, magacioner
 		\item{Preduslovi:}
+		\begin{itemize}
+			\item{Magacioner i koordinator su prijavljeni na sistem.}
+		\end{itemize}
 		
-		- Magacioner i koordinator su prijavljeni na sistem.
 		\item{Postuslovi:}
+		\begin{itemize}
+			\item{Sve dostigle namirnice su raspoređene u magacinu i baza podataka je ažurirana.}
+		\end{itemize}
 		
-		- Sve dostigle namirnice su raspoređene u magacinu i baza podataka je ažurirana.
 		\item{Osnovni tok:}
 		\begin{enumerate}
-			\item{Koordinator obaveštava magacionera o vremenu isporuke poručenih namirnica i njihovoj količini.}
+			\item{Sistem obaveštava magacionera da je došlo do izmene spiska zakazanih isporuka.}
+			\item{Magacioner proverava spisak zakazanih isporuka.}
 			\item{Kamion sa poručenim namirnicama dolazi do magacina.}
-			\item{Magacioner proverava spisak dostiglih namirnica i njihovu količinu sa listom poručenih namirnica:}
-			\begin{enumerate}
-			\item{Ako se spiskovi ne poklapaju, izvršava se podtok P1.}
-			\end{enumerate}
+			\item{Magacioner proverava spisak dostiglih namirnica i njihovu količinu sa listom poručenih namirnica.}
 			\item{Magacioner raspoređuje namirnice po magacinu.}
-			\item{Magacioner obaveštava koordinatora da je završen prijem namirnica i šalje mu spisak primljenih namirnica.}
-			\item{Koordinator ažurira bazu podataka u skladu sa spiskom primljenih namirnica.}
+			\item{Magacioner beleži u sistemu da je završen prijem namirnica i spisak primljenih namirnica.}
+			\item{Sistem ažurira bazu podataka u skladu sa spiskom primljenih namirnica.}
+			\item{Sistem obaveštava koordinatora da je određena isporuka poručenih namirnica završena.}
 		\end{enumerate}
 		
-		\item{Podtokovi:}
+		\item{Alternativni tok:}
 			\begin{enumerate}
-				\item[P1.] \textbf{Spiskovi se ne poklapaju.} 
-				\begin{enumerate}
-				\item{Magacioner vrši evidenciju namirnica koje se ne poklapaju na spiskovima i kako se ne poklapaju.}
-				\item{Magacioner preuzima samo namirnice koje se poklapaju na spiskovima i u potrebnoj količini ili manjoj.}
-				\end{enumerate}
+				\item[4.a] {Magacioner vrši evidenciju namirnica koje se ne poklapaju na spiskovima i kako se ne poklapaju.} 
+				\item[4.b]{Magacioner preuzima samo namirnice koje se poklapaju na spiskovima i u potrebnoj količini ili manjoj.}
 			\end{enumerate}
+		\item{Dodatne informacije}
+			\begin{itemize}
+				\item{Informacije o datumu i vremenu isporuke, koji od snabdevača isporučuje namirnice, koje i u kojoj količini, se nalaze na spisku zakazanih isporuka za svaku od planiranih isporuka.}
+			\end{itemize}
 	\end{itemize}
 \begin{figure}[H]
 	\begin{center}
