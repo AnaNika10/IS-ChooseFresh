@@ -24,16 +24,26 @@
 	\end{itemize}
 	\item Osnovni tok:
 		\begin{enumerate}
-            \item	Koordinator pristupa sistemu i proverava koje namernice i u kojoj količini su potrebne za predstojeću nedelju.
-           \item Koordinator pravi spisak svega sto nedostaje u magacinu.
-            \item Koordinator traži u bazi podataka snabdevače koji u svojoj ponudi nudi proizvode koji nedostaju.
-             \item  Koordiantor kontakira sa snabdevača čija ponuda pokriva nedostajuće namernice.
-            \item Snabdevač prihvata porudžbinu i šalje je do magacina.
+		  % Sistem je sam izracunao za njega sta tacno fali po narudzbinama koje su korisnici izabrali. Onaj slucaj upotrebe koji vrsi magacioner kad stignu namirnice i sistem kad izracuna pokriva pravljenje spiska stvari koje nedostaju
+            \item Koordinator pristupa sistemu i bira opciju za proveru stanja namirnica.
+           \item Sistem prikazuje koje namirnice nedostaju i količinu koju treba naručiti.
+           \item Koordinator bira opciju pretraživanja ponude snabdevača i bira nedostajuće namirnice.
+            \item Sistem prikazuje snabdevača čija ponuda pokriva nedostajuće namernice. 
+             \item  Koordinator kontakira snabdevača.
+             \item Koordinator unosi u sistem podatke o zakazanoj  porudžbini.
+            \item Sistem ažurira listu porudžbina. 
+            
 		\end{enumerate}
+		\textit{Koraci 3-7 se ponavljaju dokle god postoje namirnice koje nedostaju a nisu poručene.}
 	\item Alternativni tok:
 		\begin{itemize}
-		    \item Korak 2 - Ukoliko su sve potrebne namirnice dostupne u magacinu koordinator se vraća na korak 1 sledeće nedelje.
-		    \item Korak 4 - Ako ne postoji samo jedan snabdevač koji može da obezbedi sve namirnice koordinator stupa u kontakt sa sledećim snabdevačem. \textit{Ovaj korak obavlja dokle god ne pronađe sve potrebne namirnice.}
+		    \item[2.a] Ukoliko su sve potrebne namirnice dostupne u magacinu slučaj upotrebe se završava .
+		 
+		\end{itemize}
+   \item Dodatne informacije:
+		\begin{itemize}
+		    \item Podaci o porudžbini podrazevamaju sve namirnice koje su naručene, njihovu količinu, ime snabdevača koji ih dostavlja i vreme isporuke.
+	
 		\end{itemize}
 \end{itemize}
 
