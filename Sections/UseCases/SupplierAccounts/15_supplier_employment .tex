@@ -12,7 +12,9 @@
 		\end{itemize}				
 	\item Preduslovi:
 		\begin{itemize}
-		    \item Sistem je u funkciji
+		    \item Novi snabdevač je popunio prijavu.
+		    \item Administrator je dobio od inspekcije izveštaj i propratnu dokumentaciju snabdevača. %idk if this is a thing
+		    \item Sistem je u funkciji.
 		\end{itemize}
 	\item Postuslovi:
 		\begin{itemize}
@@ -20,24 +22,24 @@
 		\end{itemize}		
 	\item Osnovni tok:
 		\begin{enumerate}
-		    \item Administrator dobija od inspekcije izveštaj i propratnu dokumentaciju.
-		    \item Ukoliko je inspekcija uspešno prošla administrator pristupa sistemu i bira opciju za generisanje ugovora. 
-		    \item Administrator unosi podatke o novom snabdevaču. 
+		    \item Administrator proverava da li novi snabdevač ispunjava neophodne uslove analizirajući izveštaj inspekcije i propratnu dokumentaciju snabdevača.
+		    \item Administrator pristupa sistemu i bira opciju za generisanje ugovora. 
 		    \item Sistem generiše ugovor.
 		    \item Administrator šalje mejl novom snabdevaču koji sadrži ugovor i zahtev da ga potpiše.
 		    \item Novi snabdevač potpisuje i šalje ga nazad.
-		    \item Administrator bira opciju za pravljenje novog naloga i pravi novi nalog novom snabdevaču
-		    \item Administrator u bazu ubacuje njegove podatke iz prijave i arhivira njegovu dokumentaciju i izveštaj inspekcije.
+		    \item Administrator bira opciju za pravljenje novog naloga i pravi nalog novom snabdevaču na osnovu prijave snadbdevača.
+		    \item Administrator arhivira dokumentaciju snabdevača i izveštaj inspekcije.
+		    \item Sistem trajno čuva prijavu snabdevača.
 		    \item Sistem šalje mejl novom snabdevaču o uspešnoj registraciji i pravilima korišnjenja naloga.
 		\end{enumerate}
 	\item Alternativni tok:
 		\begin{itemize}
-			 \item[2.a] Snabdevač ne ispunjava zahtevane uslove i njegova prijava je odbijena. Ne može podneti novu prijavu u narednih 6 meseci. Slučaj korišćenja se završava.
+			 \item[1.a] Snabdevač ne ispunjava zahtevane uslove. Njegova prijava je odbijena i trajno se čuva u bazi. Ne može podneti novu prijavu u narednih 6 meseci. Slučaj korišćenja se završava.
 		  %  \item[4.a] Snabdevač nije pripremio potrebnu dokumentaciju prilikom inspekcije. U tom slučaju određuje se novi termin za inspekciju. Slučaj korišćenja se nastavlja od koraka 4.
 	
 		\end{itemize}
 	\item Dodatne informacije:
 		\begin{itemize}
-			\item Neophodna dokumenta koje snabdevač pokazuje prilikom inspekcije su izvod iz Registra poljoprivrednih gazdinstava ili izvod iz Agencije za privredne registre.
+			\item Neophodna dokumenta snabdevača koje administrator dobija od inspekcije pored izveštaja podrazumevaju izvod iz Registra poljoprivrednih gazdinstava ili izvod iz Agencije za privredne registre.
 		\end{itemize}						
 \end{itemize}
