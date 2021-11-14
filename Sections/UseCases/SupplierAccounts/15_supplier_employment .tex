@@ -1,0 +1,43 @@
+\subsubsection{Registrovanje snabdevača}
+
+\begin{itemize}
+	\item Kratak opis:
+		\begin{itemize}
+			\item Administrator pravi nalog novom snabdevaču.
+		\end{itemize}
+	\item Učesnici:
+		\begin{itemize}
+			\item Novi snabdevač
+			\item Administrator
+		\end{itemize}				
+	\item Preduslovi:
+		\begin{itemize}
+		    \item Sistem je u funkciji
+		\end{itemize}
+	\item Postuslovi:
+		\begin{itemize}
+			\item U bazu je ubačen novi snabdevač i omogućeno mu je da pristupa novonapravljenom nalogu.
+		\end{itemize}		
+	\item Osnovni tok:
+		\begin{enumerate}
+		    \item Administrator dobija od inspekcije izveštaj i propratnu dokumentaciju.
+		    \item Ukoliko je inspekcija uspešno prošla administrator pristupa sistemu i bira opciju za generisanje ugovora. 
+		    \item Administrator unosi podatke o novom snabdevaču. 
+		    \item Sistem generiše ugovor.
+		    \item Administrator šalje mejl novom snabdevaču koji sadrži ugovor i zahtev da ga potpiše.
+		    \item Novi snabdevač potpisuje i šalje ga nazad.
+		    \item Administrator bira opciju za pravljenje novog naloga i pravi novi nalog novom snabdevaču
+		    \item Administrator u bazu ubacuje njegove podatke iz prijave i arhivira njegovu dokumentaciju i izveštaj inspekcije.
+		    \item Sistem šalje mejl novom snabdevaču o uspešnoj registraciji i pravilima korišnjenja naloga.
+		\end{enumerate}
+	\item Alternativni tok:
+		\begin{itemize}
+			 \item[2.a] Snabdevač ne ispunjava zahtevane uslove i njegova prijava je odbijena. Ne može podneti novu prijavu u narednih 6 meseci. Slučaj korišćenja se završava.
+		  %  \item[4.a] Snabdevač nije pripremio potrebnu dokumentaciju prilikom inspekcije. U tom slučaju određuje se novi termin za inspekciju. Slučaj korišćenja se nastavlja od koraka 4.
+	
+		\end{itemize}
+	\item Dodatne informacije:
+		\begin{itemize}
+			\item Neophodna dokumenta koje snabdevač pokazuje prilikom inspekcije su izvod iz Registra poljoprivrednih gazdinstava ili izvod iz Agencije za privredne registre.
+		\end{itemize}						
+\end{itemize}
