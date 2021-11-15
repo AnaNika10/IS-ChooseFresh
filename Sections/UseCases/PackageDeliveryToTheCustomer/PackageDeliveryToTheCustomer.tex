@@ -5,6 +5,21 @@
 	\end{center}
     \caption{Dijagram slučaja upotrebe isporučivanja paketa korisniku}
 \end{figure}
+
+Na slici 12 je prikazan dijagram sekvenci koji bi predstavio sled događaja u sistemu za 3 slučaja upotrebe: 
+\begin{itemize}
+	\item{Zakazivanje isporuka}
+	\item{Pakovanje porudžbina }
+	\item{Dostava paketa}
+\end{itemize}
+
+Koordinator je zaslužan za organizaciju dostavljača i plan isporuke paketa. Koordinator, magacioner i dostavljač mogu menjati status narudžbine i u zavisnosti od njega mogu videti da li je porudžbina upakovana ili ne, da li se porudžbina trenutno pakuje, da li je paket dostavljen ili ne. Akcije aktera u sistemu zavise od statusa narudžbina. Ceo proces se odigrava sve dok nisu isporučene sve porudžbine za narednu nedelju.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{seq_delivering_packages_to_the_user.jpg}
+	\end{center}
+    \caption{Dijagram sekvenci isporučivanja paketa korisniku}
+\end{figure}
 \input{Sections/UseCases/PackageDeliveryToTheCustomer/12_scheduling_deliveries}
 \input{Sections/UseCases/PackageDeliveryToTheCustomer/8_packaging}
 \input{Sections/UseCases/PackageDeliveryToTheCustomer/7_package_delivery}
