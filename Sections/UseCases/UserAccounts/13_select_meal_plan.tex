@@ -11,17 +11,17 @@
 \begin{itemize}
     \item Kratak opis:
         \begin{itemize}
-            \item Registrovani korisnik bira svoj plan ishrane.
+            \item Registrovani klijent bira svoj plan ishrane.
         \end{itemize}
     \item Učesnici:
         \begin{itemize}
-            \item Registrovan korisnik
+            \item Registrovan klijent
         \end{itemize}
     \item Preduslovi:
         \begin{itemize}
             \item Sistem je u ispravnom stanju.
-            \item Korisnik mora biti registrovan i ulogovan na aplikaciju.
-            \item Korisnik nema odabran plan ishrane.
+            \item Klijent mora biti registrovan i ulogovan na aplikaciju.
+            \item Klijent nema odabran plan ishrane.
         \end{itemize}
     \item Postuslovi:
         \begin{itemize}
@@ -29,25 +29,25 @@
         \end{itemize}
     \item Osnovni tok:
         \begin{enumerate}
-            \item Sistem prikazuje korisniku formu za odabir plana.
-            \item Korisnik bira svoje preference za tip obroka za koji želi da dobija recepte.
-            \item Korisnik bira za koliko osoba će biti obrok.
-            \item Korisnik bira koliko obroka u nedelji želi.
-            \item Sistem prikazuje korisniku cenu odabranog plana.
-            \item Korisnik potvrđuje odabir plana.
-            \item Sistem prikazuje korisniku formu za unos adrese, željenog dana dostave i satnice dostave.
-            \item Korisnik potvđuje podatke koje je uneo.
-            \item Sistem prikazuje korisniku recepte koje može odabrati.
-            \item Korisnik bira recepte.
-            \item Sistem prikazuje korisniku formu za unos detalja o plaćanju.
-            \item Korisnik potvrđuje svoje podatke o plaćanju i potvrđuje narudžbinu.
-            \item Sistem čuva podatke i skida novac sa korisnikovog računa.
+            \item Sistem prikazuje klijentu formu za odabir plana.
+            \item Klijent bira svoje preference za tip obroka za koji želi da dobija recepte.
+            \item Klijent bira za koliko osoba će biti obrok.
+            \item Klijent bira koliko obroka u nedelji želi.
+            \item Sistem prikazuje klijentu cenu odabranog plana.
+            \item Klijent potvrđuje odabir plana.
+            \item Sistem prikazuje klijentu formu za unos adrese, željenog dana dostave i satnice dostave.
+            \item Klijent potvđuje podatke koje je uneo.
+            \item Sistem prikazuje klijentu recepte koje može odabrati.
+            \item Klijent bira recepte.
+            \item Sistem prikazuje klijentu formu za unos detalja o plaćanju.
+            \item Klijent potvrđuje svoje podatke o plaćanju i potvrđuje narudžbinu.
+            \item Sistem čuva podatke i skida novac sa klijentovog računa.
             \item Sistem prikazuje poruku o uspešnosti. 
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
-            \item Ukoliko korisnik odustane od odabira u bilo kom trenutku, pri narednom logovanju može da nastavi od poslednjeg potvrđenog odabira.
-            \item[13.a] Ukoliko sistem ne uspe da obavi skidanje novca sa računa, obaveštava korisnika o tome sa porukom o grešci. Proces se nastavlja u 11. koraku osnovnog toka.
+            \item Ukoliko klijent odustane od odabira u bilo kom trenutku, pri narednom logovanju može da nastavi od poslednjeg potvrđenog odabira.
+            \item[13.a] Ukoliko sistem ne uspe da obavi skidanje novca sa računa, obaveštava klijenta o tome sa porukom o grešci. Proces se nastavlja u 11. koraku osnovnog toka.
         \end{itemize}
     \item Dodatne informacije:
         \begin{itemize}

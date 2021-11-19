@@ -1,26 +1,26 @@
-\subsubsection{Ažuriranje podataka korisnika od strane korisnika}
+\subsubsection{Ažuriranje podataka klijenta od strane klijenta}
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=\textwidth]{Pictures/uc_update_user_profile.png}
 \end{center}
-    \caption{Dijagram slučaja upotrebe ažuriranja podataka korisnika}
+    \caption{Dijagram slučaja upotrebe ažuriranja podataka klijenta}
 \label{fig:UCUpdateUserProfile}
 \end{figure}
 
 \begin{itemize}
     \item Kratak opis:
         \begin{itemize}
-            \item Registrovani korisnik ažurira svoje podatke putem aplikacije.
+            \item Registrovani klijent ažurira svoje podatke putem aplikacije.
         \end{itemize}
     \item Učesnici:
         \begin{itemize}
-            \item Registrovan korisnik
+            \item Registrovan klijent
         \end{itemize}
     \item Preduslovi:
         \begin{itemize}
             \item Sistem je u ispravnom stanju.
-            \item Korisnik mora biti registrovan i ulogovan na aplikaciju.
+            \item Klijent mora biti registrovan i ulogovan na aplikaciju.
         \end{itemize}
     \item Postuslovi:
         \begin{itemize}
@@ -28,16 +28,16 @@
         \end{itemize}
     \item Osnovni tok:
         \begin{enumerate}
-            \item Korisnik bira opciju da ažurira svoje podatke.
+            \item Klijent bira opciju da ažurira svoje podatke.
             \item Sistem prikazuje formular za izmenu podataka.
-            \item Korisnik menja željene podatke. 
-            \item Korisnik bira opciju za čuvanje podataka.
+            \item Klijent menja željene podatke. 
+            \item Klijent bira opciju za čuvanje podataka.
             \item Sistem proverava da li su sva polja popunjena.
             \item Sistem čuva podatke i prikazuje poruku o uspešnosti.
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
-            \item[5.a] Ukoliko sistem pronađe prazno polje, obeležava ga i obaveštava korisnika da sva polja moraju biti popunjena. Korisnik popunjava polje. Proces se nastavlja u 4. koraku osnovnog toka.
+            \item[5.a] Ukoliko sistem pronađe prazno polje, obeležava ga i obaveštava klijenta da sva polja moraju biti popunjena. Klijent popunjava polje. Proces se nastavlja u 4. koraku osnovnog toka.
         \end{itemize}
     \item Dodatne informacije:
         \begin{itemize}
@@ -49,6 +49,6 @@
 \begin{center}
 \includegraphics[width=\textwidth]{Pictures/activity_update_user_profile.png}
 \end{center}
-    \caption{Dijagram aktivnosti ažuriranja podataka korisnika}
+    \caption{Dijagram aktivnosti ažuriranja podataka klijenta}
 \label{fig:ActivityUpdateUserProfile}
 \end{figure}
