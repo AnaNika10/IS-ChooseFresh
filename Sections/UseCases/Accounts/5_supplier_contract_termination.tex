@@ -27,9 +27,10 @@
             \item Snabdevač pristupa veb stranici i bira opciju za brisanje naloga.
             \item Sistem izbacuje upozerenje o brisanju naloga i traži od snabdevača da unose šifru ako želi da nastavi.
             \item Snabdevač potvrdjuje da je siguran da želi da obriše nalog tako što ponovo unosi svoju šifru.
-            \item Sistem proverava šifru, obrađuje zahtev za raskid ugovora i obaveštava administratora.
+            \item Sistem proverava šifru
+            \item Sistem obrađuje zahtev za raskid ugovora i obaveštava administratora.
             \item Administrator obavlja razgovor sa snabdevačem i vrši raskid ugovora.
-            \item Sistem uklanja snabdevača iz spiska dostupnih snabdevača i iz sistema.
+            \item Sistem uklanja snabdevača iz spiska dostupnih snabdevača i iz sistema i briše njegov nalog.
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
@@ -59,7 +60,7 @@
         \end{itemize}
     \item Preduslovi:
         \begin{itemize}
-            \item Postoji snabdevač koje je registrovan a prekršio neku od klauzula ugovora.
+            \item Postoji snabdevač koji je registrovan a prekršio je neku od klauzula ugovora.
             \item Sistem je u funkciji.
         \end{itemize}
     \item Postuslovi:
