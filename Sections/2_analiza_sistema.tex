@@ -12,30 +12,46 @@
 		\item{\textbf{Snabdevač}} - proizvodi određene namirnice i u obavezi je da dostavi koordinatoru određenu količinu namirnica na njegov zahtev. Ima pristup sistemu, ali ne predstavlja zapošljeno lice u kompaniji HelloFresh.
 		\item{\textbf{Administrator}} - objavljuje konkurs za snabdevače, sklapa ugovor o zaposlenju i pravi ugovor o saradnji sa snabdevačima.
 		
-		U daljem tekstu pod terminom \textit{zapošljena lica} podrazumevamo dostavljača, magacionera i koordinatora, dok pod terminom \textit{korisnici} podrazumevamo sve aktere u sistemu.
+		U daljem tekstu pod terminom \textit{zapošljena lica} podrazumevamo dostavljača, magacionera i koordinatora, dok pod terminom \textit{korisnici} podrazumevamo sve aktere u sistemu. Na slici \ref{fig:activity_diagram} prikazan je dijagram aktivnosti na kome su predstavljeni svi akteri sistema.
 		
 				
 	\end{itemize}
 \subsection{Dijagram toka podataka}
 
-	% Dijagram konteksta
-%	Od aktera sa sistemom interaguju: korisnik, dobavljac, snabdevac, magacioner, dostavljac, banka, HR. Od Skladista podataka imamo bazu podataka (D), ugovore o saradnji (M).
-	% UBACITI DIJAGRAM
-	% UBACITI DIJAGRAM
-	\textbf{Registrovanje klijenta i odabir plana}: klijent se pri registraciji određuje plan na koji se pretplaćuje i obavezan je postupak kako bi mogao da pristupi uslugama aplikacije. Registraciju obavlja sam i kao odgovor dobija poruku da li se uspešno registrovao ili ne.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{context_diagram.png}
+
+    \caption{Dijagram konteksta}
+    \end{center}
+    \label{fig:activity_diagram}
+\end{figure}
 	
-	\textbf{Prijavljivanje korisnika}: Da bi korisnik mogao da pristupi aplikaciji mora biti prijavljen. Ovaj postupak je identičan za sve aktere.
+	Na slici \ref{fig:DFD} prikazan je dijagram toka podataka nivoa 0. U nastavku su ukratko objašnjeni procesi predstavljeni dijagramom.
+	
+	
+	\textbf{Pristup sistemu}: Ovim procesom je obuhvaćena registracija klijenta i zaposlenih, kao i prijavljivanje korisnika sistemu. 
+	
+	\textbf{Odabir i ažuriranje plana ishrane}: Podrazumeva inicijalni odabir plana ishrane klijenta koji se pretplaćuje, kao i proces kasnijeg ažuriranja plana ishrane.
 		
-	\textbf{Odabir obroka}: Klijent bira obroke za narednu nedelju i potvrđuje svoj odabir.
+	\textbf{Dostava paketa}: Uključuje proces zakazivanja isporuka, pakovanja paketa i dostave paketa klijentu. 
 	
 	
-	\textbf{Dostava paketa}: Dostavljač mora biti prijavljen da bi mogao da dobije informacije o paketu koji treba da dostavi. 
+	\textbf{Nabavka namirnica}: Koordinator naručuje namirnice od snabdevača koji ih doprema do magacina, zatim magacioner raspoređuje primljene namirnice i vodi evidenciju o primljenim namirnicama.
 	
 	
-	\textbf{Poručivanje namirnica}: Koordinator pri prijavi na sistem dobija informacije o narudžbinama koje prosleđuje magacionerima. Od magacionera može da dobije obaveštenje da li fali neki proizvod i koordinator tada kontaktira snabdevače da organizuje prevoz robe do magacina. 
+	\textbf{Prijava i registracija snabdevača}: Ovaj proces je drugačiji od registracije klijenta i zaposlenih jer zahteva dodatne podatke (izveštaj inspekcije, prijavu snabevača dobijenu apliciranjem snabdevača, i dokumentaciju snabdevača).
 	
-	\textbf{Pakovanje paketa}: Magacioner dobija spisak nespakovanih porudžbina i bira jednu. Pakuje potrebne namirnice i obeležava paket identifikacionim brojem, zatim preuzima sledeću narudžbinu.
-	
-	\textbf{Isporučivanje namirnica}: Snabdevači su obavezi da isporuče određen proizvod u određenoj količini na zahtev koordinatora. 
-	% dodati proces registracije snabdevača (sklapanje ugovora)
+	\textbf{Ažuriranje i brisanje naloga}: Uključuje ažuriranje i brisanje naloga klijenta, zaposlenih i snabdevača.
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{dfd.png}
+
+    \caption{Dijagram toka podataka nivoa 0}
+    \end{center}
+    \label{fig:DFD}
+\end{figure}
+
 	
