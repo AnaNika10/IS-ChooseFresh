@@ -12,7 +12,6 @@
     \item Preduslovi:
         \begin{itemize}
             \item Korisnik mora da bude registrovan.
-            \item Korisnik mora da zna svoje korisničko ime i šifru koju je koristio pri registraciji.
         \end{itemize}
     \item Postuslovi:
         \begin{itemize}
@@ -21,7 +20,7 @@
     \item Osnovni tok:
         \begin{enumerate}
             \item Korisnik pristupa veb stranici i otvara formu za prijavljivanje.
-            \item Korisnik unosi svoje korisničko ime i šifru koju je koristio pri registraciji.
+            \item Korisnik unosi svoje korisničko ime i lozinku koju je koristio pri registraciji.
             \item Sistem proverava postojanje i tačnost podataka i prosleđuje korisnika dalje ka osnovnom interfejsu aplikacije.
         \end{enumerate}
     \item Alternativni tok:
@@ -35,3 +34,11 @@
             \item Zabrana prijavljivanja nakon nekoliko pokušaja obezbeđuje da server i korisnički podaci budu zaštićeni od 'brute force' napada.
         \end{itemize}
 \end{itemize}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{Pictures/activity_user_login.png}
+\end{center}
+    \caption{Dijagram aktivnosti prijavljivanja klijenta}
+\label{fig:ActivitySelectMealPlan}
+\end{figure}
