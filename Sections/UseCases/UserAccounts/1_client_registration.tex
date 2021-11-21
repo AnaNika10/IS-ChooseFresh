@@ -3,33 +3,41 @@
 \begin{itemize}
     \item Kratak opis:
         \begin{itemize}
-            \item Klijent se kroz aplikaciju registruje kako bi mogao da koristi usluge HelloFresh.
+            \item Potencijalni klijent se kroz aplikaciju registruje kako bi mogao da koristi usluge HelloFresh.
         \end{itemize}
     \item Učesnici:
         \begin{itemize}
-            \item Zainteresovana osoba koja želi da koristi usluge HelloFresh aplikacije.
+            \item Potenijalni klijent koji želi da koristi usluge HelloFresh aplikacije.
         \end{itemize}
     \item Preduslovi:
         \begin{itemize}
-            \item Email adresa klijenta ne postoji u sistemu.
+            \item Korisničko ime klijenta ne postoji u sistemu.
         \end{itemize}
     \item Postuslovi:
         \begin{itemize}
-            \item Osoba je registrovana kao aktivni klijent HelloFresh aplikacije.
+            \item Potencijalni klijent je registrovana kao aktivni klijent HelloFresh aplikacije.
         \end{itemize}
     \item Osnovni tok:
         \begin{enumerate}
-            \item Klijent pristupa veb stranici i otvara formu za registraciju.
-            \item Klijent unosi svoju email adresu i zeljenu lozinku.
-            \item Klijent potvrđuje svoju registraciju.
+            \item Potencijalni klijent pristupa veb stranici i otvara formu za registraciju.
+            \item Potencijalni klijent unosi korisničko ime i željenu lozinku.
+            \item Potencijalni klijent potvrđuje svoju registraciju.
             \item Sistem vrši validaciju registracije.
             \item Sistem pamti unetu registraciju.
-            \item Sistem omogućava klijentu prijavljivanje.
+            \item Sistem šalje mejl klijentu o uspešnoj registraciji i pravilima korišnjenja naloga.
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
-            \item[3.a] Klijent odustaje od registracije. Slučaj upotrebe se završava.
-            \item[4.a] Ukoliko je klijent odabrao korisničko ime koje već postoji u sistemu, prikazuje se odgovarajuća poruka. Slučaj upotrebe se nastavlja od koraka 2.
-            \item[4.b] Ukoliko je klijent odabrao lozinku koja ne odgovara specifikacijama sistema (prekratka), prikazuje se odgovarajuća poruka. Slučaj upotrebe se nastavlja od koraka 2.
+            \item[3.a] Potencijalni klijent odustaje od registracije. Slučaj upotrebe se završava.
+            \item[4.a] Ukoliko je potencijalni klijent odabrao korisničko ime koje već postoji u sistemu, prikazuje se odgovarajuća poruka. Slučaj upotrebe se nastavlja od koraka 2.
+            \item[4.b] Ukoliko je potencijalni klijent odabrao lozinku koja ne odgovara specifikacijama sistema (prekratka), prikazuje se odgovarajuća poruka. Slučaj upotrebe se nastavlja od koraka 2.
         \end{itemize}
 \end{itemize}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{Pictures/activity_client_registration.png}
+\end{center}
+    \caption{Dijagram aktivnosti registrovanja potencijalnog klijenta}
+\label{fig:ActivitySelectMealPlan}
+\end{figure}
