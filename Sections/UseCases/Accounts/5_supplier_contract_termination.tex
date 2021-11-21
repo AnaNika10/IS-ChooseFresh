@@ -1,37 +1,40 @@
-
 \subsubsection{Brisanje naloga usled raskida ugovora na zahtev snabdevača}
 
 \begin{itemize}
     \item Kratak opis:
         \begin{itemize}
-            \item Snabdevač inicira raskid ugovora.
+            \item Snabdevač briše nalog i inicira raskid ugovora.
         \end{itemize}
     \item Učesnici:
         \begin{itemize}
-            \item Registrovani snabdevač HelloFresh aplikacije.
-            \item Inspektor kao predstavnik HelloFresh kompanije
+            \item Administrator
+            \item Snabdevač
         \end{itemize}
     \item Preduslovi:
         \begin{itemize}
-            \item Snabdevač mora da bude prijavljen.
-            \item Snabdevač mora da poseduje važeći ugovor o radu sa HelloFresh kompanijom.
+          \item Sistem je u funkciji.
+            \item Snabdevač mora da bude registrovan i prijavljen na sistem.
+            
         \end{itemize}
     \item Postuslovi:
         \begin{itemize}
-            \item Uspešno je raskinut ugovor između snabdevača i HelloFresh kompanije
+            \item Uspešno je raskinut ugovor između snabdevača i HelloFresh kompanije.
             \item Snabdevač prestaje se uslugom dostavljanja namirnica.
-            \item Nalog snabdevača je uklonjen iz sistema.
+            \item Nalog snabdevača je obrisan iz sistema.
         \end{itemize}
     \item Osnovni tok:
         \begin{enumerate}
-            \item Snabdevač pristupa veb stranici i potvrđuje raskid ugovora.
-            \item Sistem obrađuje zahtev za raskid ugovora i obaveštava nekog od inspektora.
-            \item Inspektor obavlja razgovor sa snabdevačem i vrši raskid ugovora.
+            \item Snabdevač pristupa veb stranici i bira opciju za brisanje naloga.
+            \item Sistem izbacuje upozerenje o brisanju naloga i traži od snabdevača da unose šifru ako želi da nastavi.
+            \item Snabdevač potvrdjuje da je siguran da želi da obriše nalog tako što ponovo unosi svoju šifru.
+            \item Sistem proverava šifru, obrađuje zahtev za raskid ugovora i obaveštava administratora.
+            \item Administrator obavlja razgovor sa snabdevačem i vrši raskid ugovora.
             \item Sistem uklanja snabdevača iz spiska dostupnih snabdevača i iz sistema.
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
-            \item[1.a] Korisnik odustaje od raskida ugovora. Slučaj upotrebe se završava.
+            \item[2.a] Snabdevač odustaje od brisanja naloga. Slučaj upotrebe se završava.
+            \item[4.a] Snabdevač nije ukucao tačnu šifru. Slučaj upotrebe se nastavlja od koraka 2.
         \end{itemize}
 \end{itemize}
 
@@ -48,29 +51,29 @@
 \begin{itemize}
     \item Kratak opis:
         \begin{itemize}
-            \item Kompanija HelloFresh inicira raskid ugovora sa snabdevačem.
+            \item Administrator inicira raskid ugovora sa snabdevačem i briše njegov nalog.
         \end{itemize}
     \item Učesnici:
         \begin{itemize}
-            \item Snabdevač HelloFresh aplikacije.
-            \item Inspektor kao predstavnik HelloFresh kompanije.
+            \item Administrator
         \end{itemize}
     \item Preduslovi:
         \begin{itemize}
-            \item Snabdevač mora da poseduje važeći ugovor o radu sa HelloFresh kompanijom.
-            \item Snabdevač je prekršio neku od klauzula ugovora.
+            \item Postoji snabdevač koje je registrovan a prekršio neku od klauzula ugovora.
+            \item Sistem je u funkciji.
         \end{itemize}
     \item Postuslovi:
         \begin{itemize}
-            \item Uspešno je raskinut ugovor između snabdevača i HelloFresh kompanije
+            \item Uspešno je raskinut ugovor između snabdevača i HelloFresh kompanije.
             \item Snabdevač prestaje se uslugom dostavljanja namirnica.
             \item Nalog snabdevača je uklonjen iz sistema.
         \end{itemize}
     \item Osnovni tok:
         \begin{enumerate}
-            \item Inspektor uočava da je snabdevač prekršio uslove ugovora ili je ocena korisnika za datog snabdevača ispod granice.
-            \item Inspektor vrši raskid ugovora i obaveštava snabdevača o raskidu.
-            \item Sistem uklanja snabdevača iz spiska dostupnih snabdevača i iz sistema.
+            \item Administrator uočava da je snabdevač prekršio uslove ugovora.
+            \item Administrator vrši raskid ugovora i obaveštava snabdevača o raskidu.
+            \item Administrator bira opciju za brisanje naloga snabdevača.
+            \item Sistem uklanja nalog snabdevača iz baze.
         \end{enumerate}
 \end{itemize}
 
