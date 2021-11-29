@@ -10,7 +10,7 @@
 		\item{\textbf{Magacioner}} - pakuje pakete koji treba da se dostave u toku nedelje. Prima dostavljene namirnice i raspoređuje ih po magacinu.
 		\item{\textbf{Koordinator}} - zadužen je za kontrolu magacina, koliko i kojih namirnica dolazi i odlazi iz magacina. U slučaju nedostatka određenih namirnica mora da kontaktira snabdevače kako bi ih nabavio.
 		\item{\textbf{Snabdevač}} - proizvodi određene namirnice i u obavezi je da dostavi koordinatoru određenu količinu namirnica na njegov zahtev. Ima pristup sistemu, ali ne predstavlja zapošljeno lice u kompaniji HelloFresh.
-		\item{\textbf{Administrator}} - objavljuje konkurs za snabdevače, sklapa ugovor o zaposlenju i pravi ugovor o saradnji sa snabdevačima.
+		\item{\textbf{Administrator}} - objavljuje konkurs za snabdevače, pravi ugovor o saradnji sa snabdevačima i zapošljava nova lica. 
 		
 		U daljem tekstu pod terminom \textit{zapošljena lica} podrazumevamo dostavljača, magacionera i koordinatora, dok pod terminom \textit{korisnici} podrazumevamo sve aktere u sistemu. Na slici \ref{fig:context_diagram} prikazan je dijagram aktivnosti na kome su predstavljeni svi akteri sistema.
 		
@@ -23,14 +23,15 @@
 		\includegraphics[width=\textwidth]{context_diagram.png}
 
 	    \caption{Dijagram konteksta}
+	\label{fig:context_diagram}
     \end{center}
-    \label{fig:context_diagram}
+    
 \end{figure}
 
 	Na slici \ref{fig:DFD} prikazan je dijagram toka podataka nivoa 0. U nastavku su ukratko objašnjeni procesi predstavljeni dijagramom.
 	
 	
-	\textbf{Pristup sistemu}: Ovim procesom je obuhvaćena registracija klijenta i zaposlenih, kao i prijavljivanje korisnika sistemu. 
+	\textbf{Upravljanje nalozima}: Ovim procesom je obuhvaćena registracija klijenta i zaposlenih, kao i prijavljivanje korisnika sistemu. Uključuje ažuriranje i brisanje naloga klijenta, zaposlenih i snabdevača.
 	
 	\textbf{Odabir i ažuriranje plana ishrane}: Podrazumeva inicijalni odabir plana ishrane klijenta koji se pretplaćuje, kao i proces kasnijeg ažuriranja plana ishrane.
 		
@@ -41,8 +42,6 @@
 	
 	
 	\textbf{Prijava i registracija snabdevača}: Ovaj proces je drugačiji od registracije klijenta i zaposlenih jer zahteva dodatne podatke (izveštaj inspekcije, prijavu snabevača dobijenu apliciranjem snabdevača, i dokumentaciju snabdevača).
-	
-	\textbf{Ažuriranje i brisanje naloga}: Uključuje ažuriranje i brisanje naloga klijenta, zaposlenih i snabdevača.
 
 
 \begin{figure}[H]
@@ -50,8 +49,9 @@
 		\includegraphics[width=\textwidth]{dfd.png}
 
     		\caption{Dijagram toka podataka nivoa 0}
-    \end{center}
     \label{fig:DFD}
+    \end{center}
+ 
 \end{figure}
 
 	

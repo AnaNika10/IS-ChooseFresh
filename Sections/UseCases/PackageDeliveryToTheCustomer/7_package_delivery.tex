@@ -4,12 +4,12 @@
 	\begin{itemize}
 		\item{Kratak opis:} 
 		\begin{itemize}
-			\item{Dostavljač dobija informacije o paketu od sistema i dostavlja paket korisniku.}
+			\item{Dostavljač dobija informacije o paketu od sistema i dostavlja paket klijentu.}
 		\end{itemize}
 		
 		\item{Učesnici:} 
 		\begin{itemize}
-			\item{Dostavljač, korisnik}
+			\item{Dostavljač, klijent}
 		\end{itemize}		
 		
 		\item{Preduslovi:}
@@ -20,7 +20,7 @@
 
 		\item{Postuslovi:}
 		\begin{itemize}
-			\item{Korisnik dobija svoj paket sa namirnicama.}
+			\item{Dostava je evidentirana u sistemu.}
 		\end{itemize}		
 		
 		\item{Osnovni tok:}
@@ -28,8 +28,8 @@
 			\item{Dostavljač dobija obaveštenje od sistema da ima nedostavljenih paketa.}
 			\item{Dostavljač dolazi do magacina gde su smešteni paketi.}
 			\item{Dostavljač očitava identifikacioni broj paketa pomoću sistema i dobija informacije o porudžbini.}
-			\item{Dostavljač dolazi do destinacije korisnika u predviđenom periodu.}
-			\item{Korisnik preuzima svoj paket.}
+			\item{Dostavljač dolazi do destinacije klijenta u predviđenom periodu.}
+			\item{Klijent preuzima svoj paket.}
 			\item{Dostavljač beleži da je uspešno izvršio dostavu.}
 			
 			
@@ -38,8 +38,9 @@
 		
 		\item{Alternativni tokovi:}
 			\begin{enumerate}
-				\item[4.a] Ukoliko dostavljač proceni da će kasniti, obaveštava korisnika pomoću sistema.
-				\item[5.a] Ukoliko korisnik nije na naznačenoj adresi, dostavljač ostavlja paket ispred ulaza. Slučaj upotrebe se nastavlja od koraka 6.%Sistem obaveštava korisnika da dostavljač nije uspeo da dostavi paket i traži od korisnika da potvrdi svoju adresu. Ako je korisnik promenio adresu, sistem ga navodi na opciju ažuriranja naloga.  
+				\item[4.a] Ukoliko dostavljač proceni da će kasniti, obaveštava klijenta pomoću sistema. Slučaj upotrebe se nastavlja od koraka 5.
+				\item[5.a] Ukoliko klijent nije na naznačenoj adresi, dostavljač ostavlja paket ispred ulaza i preko sistema obaveštava klijenta da je paket dostavljen. Slučaj upotrebe se nastavlja od koraka 6.
+				%Sistem obaveštava korisnika da dostavljač nije uspeo da dostavi paket i traži od korisnika da potvrdi svoju adresu. Ako je korisnik promenio adresu, sistem ga navodi na opciju ažuriranja naloga.  
 			\end{enumerate}
 		\item{Dodatne informacije:}
 			\begin{itemize}
