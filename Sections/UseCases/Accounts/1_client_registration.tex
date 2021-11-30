@@ -10,9 +10,8 @@
             \item Potenijalni klijent koji želi da koristi usluge HelloFresh aplikacije.
         \end{itemize}
     \item Preduslovi:
-        \begin{itemize}
-            \item Korisničko ime klijenta ne postoji u sistemu.
-        \end{itemize}
+    %    \begin{itemize}
+    %    \end{itemize}
     \item Postuslovi:
         \begin{itemize}
             \item Potencijalni klijent je registrovana kao aktivni klijent HelloFresh aplikacije.
@@ -20,7 +19,7 @@
     \item Osnovni tok:
         \begin{enumerate}
             \item Potencijalni klijent pristupa veb stranici i otvara formu za registraciju.
-            \item Potencijalni klijent unosi korisničko ime i željenu lozinku.
+            \item Potencijalni klijent popunjava formu za registraciju.
             \item Potencijalni klijent potvrđuje svoju registraciju.
             \item Sistem vrši validaciju registracije.
             \item Sistem pamti unetu registraciju.
@@ -32,6 +31,10 @@
             \item[4.a] Ukoliko je potencijalni klijent odabrao korisničko ime koje već postoji u sistemu, prikazuje se odgovarajuća poruka. Slučaj upotrebe se nastavlja od koraka 2.
             \item[4.b] Ukoliko je potencijalni klijent odabrao lozinku koja ne odgovara specifikacijama sistema (prekratka), prikazuje se odgovarajuća poruka. Slučaj upotrebe se nastavlja od koraka 2.
         \end{itemize}
+    \item Dodatne informacije:
+    \begin{itemize}
+        \item Forma za registraciju sadrži sledeće podatke: korisničko ime, lozinka, mejl adresa
+    \end{itemize}
 \end{itemize}
 
 \begin{figure}[H]
