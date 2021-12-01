@@ -5,53 +5,11 @@ Baza je predstavljena dijagramom klasa na slici %ubaciti referencu.
 U bazi su opisane tri grupe podataka:
 \begin{itemize}
 % izmenite slobodno nazive ovih grupa ako vam se ne svidjaju
-    \item podaci o zaposlenima
-    \item podaci o porudžbini
-    \item podaci o namirnicama
+    \item podaci o zaposlenima i snabdevačima
+    \item podaci o klijentu i porudžbinama
+    \item podaci o namirnicama i dostavi
 \end{itemize}
 
-\subsection{Podaci o zaposlenima}
-\subsection{Podaci o porudžbini}
-\subsection{Podaci o namirnicama}
-
-\textbf{\large Namirnice}
-\vspace{0.3cm}
-
-Klasa \textit{Namirnice} predstavlja jednu namirnicu i njenu dostupnu količinu u magacinu.
-
-Atributi:
-\begin{itemize}
-    \item id - jedinstveni identifikator namirnice
-    \item naziv 
-    \item spisakSnabdevača - spisak svih snabdevača koji imaju ovu namirnicu u ponudi.
-    \item količina
-\end{itemize}
-
-\textbf{\large Nabavka}
-\vspace{0.3cm}
-
-Klasa \textit{Nabavka} predstavlja jednu nabavku namirnica koju zakazuje koordinator sa snabdevačem.
-
-Atributi:
-\begin{itemize}
-    \item id - jedinstveni identifikator nabavke
-    \item idMagacionera - magacioner koji prima isporuku 
-    \item idKoordinatora - koordinator koji je zakazao nabavku
-    \item idSnabdevača - snabdevač koji dostavlja namirnice
-    \item namirnice - spisak namirnica koji se nalaze u jednoj nabavci
-    % ovde nam fali lista parova, potrebna je i količina
-\end{itemize}
-
-\textbf{\large Dostavljanje paketa}
-\vspace{0.3cm}
-
-Klasa \textit{Dostavljanje paketa} predstavlja jednu dostavu paketa  koji je klijent poručio.
-
-Atributi:
-\begin{itemize}
-    \item id - jedinstveni identifikator paketa
-    \item status - status paketa opisan u \ref{fig:StatePackage}
-    \item idPorudžbine - porudžbina koja treba da se upakuje i dostavi
-    \item idMagacionera - magacioner koji pakuje porudžbinu
-    \item idDostavljača - dostavljač koji je zadužen za dostavu paketa do klijenta
-\end{itemize}
+\input{Sections/Database/employee_supplier}
+\input{Sections/Database/client_order}
+\input{Sections/Database/groceries_delivery}
