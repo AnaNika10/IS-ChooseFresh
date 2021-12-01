@@ -1,1 +1,45 @@
-\subsection{Podaci o klijentu i porudžbinama}
+\textbf{\large Klijent}
+\vspace{0.3cm}
+
+Klasa \textit{Klijent} predstavlja jednog klijenta, njegove lične podatke kao i preference oko plana ishrane.
+
+Atributi:
+\begin{itemize}
+    \item id (PK, automatski generisan)
+    \item korisničkoIme 
+    \item lozinka
+    \item mejl
+    \item brojPlatneKartice
+    \item statusPretplate
+    \item adresaDostave
+    \item datumDostave
+    \item satnicaDostave
+    \item tipObroka
+    \item brojPorcija
+    \item brojObroka
+\end{itemize}
+
+\textbf{\large Recept}
+\vspace{0.3cm}
+
+Klasa \textit{Recept} predstavlja jedan recept koji klijent može poručiti.
+
+Atributi:
+\begin{itemize}
+    \item id (PK, automatski generisan)
+    \item namirnice - lista parova (id namirnice, količina namirnice potrebna za recept) (svaki id je SK koji referiše na Namirnice)
+    \item vremeIzrade
+    \item tipObroka - kom tipu obroka pripada recept
+\end{itemize}
+
+\textbf{\large Porudžbina}
+\vspace{0.3cm}
+
+Klasa \textit{Porudžbina} predstavlja porudžbinu klijenta za određenu nedelju.
+
+Atributi:
+\begin{itemize}
+    \item id (PK, automatski generisan)
+    \item idKlijenta (SK koji referiše na Klijent)
+    \item recepti - lista id recepata (svaki id je SK koji referiše na Recept)
+\end{itemize}
