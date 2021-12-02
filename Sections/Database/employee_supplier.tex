@@ -8,7 +8,7 @@ Klasa \textit{Zaposleni} predstavlja jednu zaposlenu osobu HelloFresh kompanije.
 
 Atributi:
 \begin{itemize}
-    \item id - jedinstveni identifikator zaposlenog
+    \item id - jedinstveni identifikator zaposlenog (PK, automatski generisan)
     \item ime
     \item prezime
     \item jmbg
@@ -23,11 +23,11 @@ Atributi:
 \textbf{\large Snabdevač}
 \vspace{0.3cm}
 
-Klasa \textit{Nabavka} predstavlja jednog snabdevača, njegove lične podatke i poslovne detalje
+Klasa \textit{Snabdevač} predstavlja jednog snabdevača, njegove lične podatke i poslovne detalje.
 
 Atributi:
 \begin{itemize}
-    \item id - jedinstveni identifikator snabdevača
+    \item id - jedinstveni identifikator snabdevača (PK, automatski generisan)
     \item korisničkoIme
     \item lozinka
     \item ime
@@ -35,7 +35,7 @@ Atributi:
     \item mejl
     \item adresa
     \item brojTelefona
-    \item namirnice - lista id namirnica (svaki id je SK koji referiše na Namirnic)
+    \item namirnice - lista id namirnica (svaki id je SK koji referiše na Namirnice)
 \end{itemize}
 
 \textbf{\large Ugovor}
@@ -45,7 +45,7 @@ Klasa \textit{Ugovor} predstavlja jedan ugovor koji zaključuje snabdevač sa ko
 
 Atributi:
 \begin{itemize}
-    \item id - jedinstveni identifikator paketa
+    \item id - jedinstveni identifikator ugovora (PK, automatski generisan)
     \item idAdministratora - administrator koji je potpisao ugovor (SK koji referiše na Administrator)
     \item idSnabdevača - snabdevač koji je potpisao ugovor (SK koji referiše na Snabdevač)
     \item datumPotpisivanja

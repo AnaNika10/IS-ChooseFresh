@@ -1,3 +1,5 @@
+\subsection{Podaci o klijentu i porudžbinama}
+
 \textbf{\large Klijent}
 \vspace{0.3cm}
 
@@ -5,7 +7,7 @@ Klasa \textit{Klijent} predstavlja jednog klijenta, njegove lične podatke kao i
 
 Atributi:
 \begin{itemize}
-    \item id (PK, automatski generisan)
+    \item id - jedinstveni identifikator klijenta (PK, automatski generisan)
     \item korisničkoIme 
     \item lozinka
     \item mejl
@@ -26,7 +28,7 @@ Klasa \textit{Recept} predstavlja jedan recept koji klijent može poručiti.
 
 Atributi:
 \begin{itemize}
-    \item id (PK, automatski generisan)
+    \item id - jedinstveni identifikator recepta (PK, automatski generisan)
     \item namirnice - lista parova (id namirnice, količina namirnice potrebna za recept) (svaki id je SK koji referiše na Namirnice)
     \item vremeIzrade
     \item tipObroka - kom tipu obroka pripada recept
@@ -39,7 +41,7 @@ Klasa \textit{Porudžbina} predstavlja porudžbinu klijenta za određenu nedelju
 
 Atributi:
 \begin{itemize}
-    \item id (PK, automatski generisan)
+    \item id - jedinstveni identifikator porudžbine (PK, automatski generisan)
     \item idKlijenta (SK koji referiše na Klijent)
     \item recepti - lista id recepata (svaki id je SK koji referiše na Recept)
 \end{itemize}
