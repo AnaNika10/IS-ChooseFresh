@@ -7,9 +7,9 @@ Klasa \textit{Namirnice} predstavlja jednu namirnicu i njenu dostupnu količinu 
 
 Atributi:
 \begin{itemize}
-    \item id - jedinstveni identifikator namirnice
+    \item id - jedinstveni identifikator namirnice (PK)
     \item naziv 
-    \item spisakSnabdevača - spisak svih snabdevača koji imaju ovu namirnicu u ponudi.
+    \item spisakSnabdevača - spisak svih snabdevača koji imaju ovu namirnicu u ponudi. Elementi liste su id snabdevača (SK)
     \item količina
 \end{itemize}
 
@@ -20,12 +20,11 @@ Klasa \textit{Nabavka} predstavlja jednu nabavku namirnica koju zakazuje koordin
 
 Atributi:
 \begin{itemize}
-    \item id - jedinstveni identifikator nabavke
-    \item idMagacionera - magacioner koji prima isporuku 
-    \item idKoordinatora - koordinator koji je zakazao nabavku
-    \item idSnabdevača - snabdevač koji dostavlja namirnice
-    \item namirnice - spisak namirnica koji se nalaze u jednoj nabavci
-    % ovde nam fali lista parova, potrebna je i količina
+    \item id - jedinstveni identifikator nabavke (PK)
+    \item idMagacionera - magacioner koji prima isporuku (SK)
+    \item idKoordinatora - koordinator koji je zakazao nabavku (SK)
+    \item idSnabdevača - snabdevač koji dostavlja namirnice (SK)
+    \item namirnice - spisak namirnica sa njihovim količinama koji se nalaze u jednoj nabavci. Prvi element para je id namirnice  (SK).
 \end{itemize}
 
 \textbf{\large Dostavljanje paketa}
@@ -35,9 +34,9 @@ Klasa \textit{Dostavljanje paketa} predstavlja jednu dostavu paketa  koji je kli
 
 Atributi:
 \begin{itemize}
-    \item id - jedinstveni identifikator paketa
+    \item id - jedinstveni identifikator paketa (PK)
     \item status - status paketa opisan u \ref{fig:StatePackage}
-    \item idPorudžbine - porudžbina koja treba da se upakuje i dostavi
-    \item idMagacionera - magacioner koji pakuje porudžbinu
-    \item idDostavljača - dostavljač koji je zadužen za dostavu paketa do klijenta
+    \item idPorudžbine - porudžbina koja treba da se upakuje i dostavi (SK)
+    \item idMagacionera - magacioner koji pakuje porudžbinu (SK)
+    \item idDostavljača - dostavljač koji je zadužen za dostavu paketa do klijenta (SK)
 \end{itemize}
