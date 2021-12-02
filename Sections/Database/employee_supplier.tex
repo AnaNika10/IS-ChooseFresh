@@ -1,1 +1,53 @@
+
 \subsection{Podaci o zaposlenima i snabdevačima}
+
+\textbf{\large Zaposleni}
+\vspace{0.3cm}
+
+Klasa \textit{Zaposleni} predstavlja jednu zaposlenu osobu HelloFresh kompanije. Iz ovog tipa entiteta primenom specijalizacije izvodimo 4 nova tipa entiteta koji odgovaraju različitim ulogama zaposlenih u sistemu: Administrator, Koordinator, Dostavljač i Magacioner.
+
+Atributi:
+\begin{itemize}
+    \item id - jedinstveni identifikator zaposlenog
+    \item ime
+    \item prezime
+    \item jmbg
+    \item datumRođenja
+    \item pol
+    \item adresa
+    \item datumZaposlenja
+    \item brojBankovnogRačuna
+    \item visina plate
+\end{itemize}
+
+\textbf{\large Snabdevač}
+\vspace{0.3cm}
+
+Klasa \textit{Nabavka} predstavlja jednog snabdevača, njegove lične podatke i poslovne detalje
+
+Atributi:
+\begin{itemize}
+    \item id - jedinstveni identifikator snabdevača
+    \item korisničkoIme
+    \item lozinka
+    \item ime
+    \item prezime
+    \item mejl
+    \item adresa
+    \item brojTelefona
+    \item namirnice - lista id namirnica (svaki id je SK koji referiše na Namirnic)
+\end{itemize}
+
+\textbf{\large Ugovor}
+\vspace{0.3cm}
+
+Klasa \textit{Ugovor} predstavlja jedan ugovor koji zaključuje snabdevač sa kompanijom HelloFresh
+
+Atributi:
+\begin{itemize}
+    \item id - jedinstveni identifikator paketa
+    \item idAdministratora - administrator koji je potpisao ugovor (SK koji referiše na Administrator)
+    \item idSnabdevača - snabdevač koji je potpisao ugovor (SK koji referiše na Snabdevač)
+    \item datumPotpisivanja
+    \item dužinaTrajanja - broj meseci važenja ugovora
+\end{itemize}
