@@ -9,7 +9,7 @@ Atributi:
 \begin{itemize}
     \item id - jedinstveni identifikator namirnice (PK)
     \item naziv 
-    \item spisakSnabdevača - spisak svih snabdevača koji imaju ovu namirnicu u ponudi. Elementi liste su id snabdevača (SK)
+    \item spisakSnabdevača - spisak svih snabdevača koji imaju ovu namirnicu u ponudi. Elementi liste su id snabdevača (SK, referiše na Snabdevača)
     \item količina
 \end{itemize}
 
@@ -21,10 +21,10 @@ Klasa \textit{Nabavka} predstavlja jednu nabavku namirnica koju zakazuje koordin
 Atributi:
 \begin{itemize}
     \item id - jedinstveni identifikator nabavke (PK)
-    \item idMagacionera - magacioner koji prima isporuku (SK)
-    \item idKoordinatora - koordinator koji je zakazao nabavku (SK)
-    \item idSnabdevača - snabdevač koji dostavlja namirnice (SK)
-    \item namirnice - spisak namirnica sa njihovim količinama koji se nalaze u jednoj nabavci. Prvi element para je id namirnice  (SK).
+    \item idMagacionera - magacioner koji prima isporuku (SK, referiše na Magacionera)
+    \item idKoordinatora - koordinator koji je zakazao nabavku (SK, referiše na Koordinatora)
+    \item idSnabdevača - snabdevač koji dostavlja namirnice (SK, referiše na Snabdevača) 
+    \item namirnice - spisak namirnica sa njihovim količinama koji se nalaze u jednoj nabavci. Prvi element para je id namirnice  (SK, referiše na Namirnice).
 \end{itemize}
 
 \textbf{\large Dostavljanje paketa}
@@ -36,7 +36,7 @@ Atributi:
 \begin{itemize}
     \item id - jedinstveni identifikator paketa (PK)
     \item status - status paketa opisan u \ref{fig:StatePackage}
-    \item idPorudžbine - porudžbina koja treba da se upakuje i dostavi (SK)
-    \item idMagacionera - magacioner koji pakuje porudžbinu (SK)
-    \item idDostavljača - dostavljač koji je zadužen za dostavu paketa do klijenta (SK)
+    \item idPorudžbine - porudžbina koja treba da se upakuje i dostavi (SK, referiše na Porudžbine)
+    \item idMagacionera - magacioner koji pakuje porudžbinu (SK, referiše na Magacionera)
+    \item idDostavljača - dostavljač koji je zadužen za dostavu paketa do klijenta (SK, referiše na Dostavljača)
 \end{itemize}
