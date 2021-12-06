@@ -1,4 +1,11 @@
 \subsubsection{Serverski kontroler}
+Ovoj komponenti arhitekture korisnici nemaju pristup što omogućava da se ovde vrši autentikacija/autorizacija kako bi korisnik video samo one stranice koje ima pravo da vidi na osnovu svog identiteta i svojih prava pristupa. Serverski kontroler vrši i verifikaciju. Takođe ovde se vrši komunikacija sa bazom podataka i sva izračunavanja nad podacima uzetim iz baze.
+\begin{itemize}
+    \item Autorizacija i autentifikacija
+    \item Verifikacija
+    \item Upravljanje podacima
+\end{itemize}
 
 
 \subsubsection{Sloj podataka}
+Sadrži bazu podataka i mehanizme koji na bezbedan način omogućavaju serverskom kontroleru da pristupi bazi podataka. Shema baze podataka može se naći u sekciji \ref{sec:database}.
