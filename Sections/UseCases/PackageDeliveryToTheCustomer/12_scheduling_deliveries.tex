@@ -23,11 +23,16 @@
 		\begin{enumerate}
             \item Koordinator pristupa sistemu i prolazi kroz sve narudžbine koje bi trebalo da se obave sledeće nedelje.
             \item Sistem pristupa bazi podataka i generiše listu svih zakazanih narudžbina za sledeću nedelju.
-           \item Koordinator svakoj narudžbini dodeljuje dostavljača.
-           \item Sistem svakoj narudžbini ažurira dodeljenog dostavljača.
-            \item Koordinator dostavljačima preko sistema prosleđuje njegovu listu isporuka za narednu nedelju.
+            \item Koordinator selektuje jednu od narudžbina.
+            \item Sistem pristupa bazi podataka i generiše listu dostavljača koji su slobodni u zakazano vreme selektovane narudžbine i koji rade u delu grada rade gde je potrebno dostaviti narudžbinu.
+           \item Koordinator narudžbini dodeljuje dostavljača.
+           \item Sistem narudžbini ažurira dodeljenog dostavljača.
             \item Sistem klijentu šalje automatski mejl kojim ga obaveštava da je porudžbina obrađena i podseća  ga u koje vreme mora da bude kod kuće da bi primio porudžbinu.
+           \item Koordinator bira opciju za pregled listu isporuka za narednu nedelju svim dostavljačima i provera njihovu ispravnost.
+            \item Koordinator dostavljačima preko sistema prosleđuje njegovu listu isporuka za narednu nedelju.
+
 		\end{enumerate}
+	  \textit{Koraci 3-7 se ponavljaju dok postoje narudžbine koje nisu dodeljene nijednom dostavljaču.}
    \item Dodatne informacije:
         \begin{itemize}
             \item Lista isporuka se sastoji od identifikacionih brojeva narudžbina, zakazanog vremena dostave i zakazanog vremena pakovanja porudžbine. 
@@ -36,9 +41,9 @@
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=\textwidth]{activity_diagram_scheduling_deliveries.jpg}
+\includegraphics[width=\textwidth]{Pictures/sequence_scheduling_deliveries.jpg}
 \end{center}
-    \caption{Dijagram aktivnosti - Zakazivanje isporuka}
-\label{fig:Activity_diagram_scheduling_deliveries}
+    \caption{Dijagram sekvenci - Zakazivanje isporuka}
+\label{fig:Sequence_diagram_scheduling_deliveries}
 \end{figure}
 
