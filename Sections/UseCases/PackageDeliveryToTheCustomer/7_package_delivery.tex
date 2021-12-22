@@ -14,7 +14,8 @@
 		
 		\item{Preduslovi:}
 		\begin{itemize}
-			\item{Dostavljač je prijavljen na sistem i ima nedostavljenih paketa. }
+			\item{Dostavljač je prijavljen na sistem.}
+			\item{Dostavljač je primio listu isporuka za taj dan.}
 			\item{Klijent je poručio paket.}
 		\end{itemize}		
 
@@ -25,15 +26,12 @@
 		
 		\item{Osnovni tok:}
 		\begin{enumerate}
-			\item{Dostavljač dobija obaveštenje od sistema da ima nedostavljenih paketa.}
 			\item{Dostavljač dolazi do magacina gde su smešteni paketi.}
-			\item{Dostavljač očitava identifikacioni broj paketa pomoću sistema i dobija informacije o porudžbini.}
+			\item{Dostavljač preuzima sve navedene narudžbine sa spiska isporuka za taj dan.}
 			\item{Dostavljač dolazi do destinacije klijenta u predviđenom periodu.}
 			\item{Klijent preuzima svoj paket.}
 			\item{Dostavljač beleži da je uspešno izvršio dostavu.}
 			
-			
-			\textit{Koraci 2-6 se ponavljaju sve dok ima nedostavljenih paketa.}
 		\end{enumerate}
 		
 		\item{Alternativni tokovi:}
@@ -42,10 +40,6 @@
 				\item[5.a] Ukoliko klijent nije na naznačenoj adresi, dostavljač ostavlja paket ispred ulaza i preko sistema obaveštava klijenta da je paket dostavljen. Slučaj upotrebe se nastavlja od koraka 6.
 				%Sistem obaveštava korisnika da dostavljač nije uspeo da dostavi paket i traži od korisnika da potvrdi svoju adresu. Ako je korisnik promenio adresu, sistem ga navodi na opciju ažuriranja naloga.  
 			\end{enumerate}
-		\item{Dodatne informacije:}
-			\begin{itemize}
-				\item{Spisak nedostavljenih paketa je sortiran rastuće po vremenu dostave.}
-			\end{itemize}
 	\end{itemize}
 	
 \begin{figure}[H]
