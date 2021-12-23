@@ -9,3 +9,20 @@ Stranica za prijavljivanje klijenta (slika \ref{fig:Login}) ima slične funkcion
     \label{fig:Login}
     \end{center}
 \end{figure}
+
+Ako klijent unese pogrešne podatke za prijavljivanje na sistem, prikazuje se stranica \ref{fig:WrongInput}. U slučaju da klijent više puta pokušava da se prijavi na sistem sa pogrešnim podacima, pojavljuje se prozor koji obaveštava klijenta da može pokušati ponovo tek nakon 1h (slika \ref{fig:BruteForceAttack}).
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{UI/WrongInput.jpg}
+    		\caption{Stranica za prijavljivanje klijenta ako je uneo pogrešne podatke}
+    \label{fig:WrongInput}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{UI/BruteForceAttack.jpg}
+    		\caption{Stranica za prijavljivanje klijenta ukoliko je neuspešno prijavljivanje nakon više pokušaja}
+    \label{fig:BruteForceAttack}
+    \end{center}
+\end{figure}
