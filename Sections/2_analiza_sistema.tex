@@ -7,13 +7,13 @@
 	\begin{itemize}
         \item{\textbf{Klijent}} - predstavlja krajnjeg korisnika. Klijent može naručiti određen broj obroka po nedelji u skladu sa njegovom izabranom ishranom. Naručivanje obroka se vrši preko veb aplikacije i moguće je izmeniti odabir obroka do određenog dana u nedelji. U zavisnosti od broja obroka po nedelji, veličine obroka i tipa obroka formira se plan na koji se klijent pretplaćuje. Klijent je takođe u mogućnosti da preskoči naručivanje obroka za neku od narednih nedelja. Uz svaki obrok dostavljaju se i recepti za obrok, napisani korak po korak. Klijentu se svake nedelje menja ponuda mogućih obroka. Sistem je zaslužan za pravljenje ponude i to radi po određenom algoritmu koji bira obroke i njihove recepte iz baze podataka.
 		Klijent može odabrati datum i vreme dostave, međutim vreme dostave je podložno promeni u periodu do sat vremena od unete satnice, zbog dostupnosti dostavljača.
-		\item{\textbf{Dostavljač}} - preuzima paket sa identifikacionim brojem na osnovu kog dobija informacije kome i gde treba da dostavi paket sa namirnicama.
+		\item{\textbf{Dostavljač}} - preuzima pakete sa liste isporuka za taj dan.
 		\item{\textbf{Magacioner}} - pakuje pakete koji treba da se dostave u toku nedelje. Prima dostavljene namirnice i raspoređuje ih po magacinu.
 		\item{\textbf{Koordinator}} - zadužen je za kontrolu magacina, koliko i kojih namirnica dolazi i odlazi iz magacina. U slučaju nedostatka određenih namirnica mora da kontaktira snabdevače kako bi ih nabavio.
 		\item{\textbf{Snabdevač}} - proizvodi određene namirnice i u obavezi je da dostavi koordinatoru određenu količinu namirnica na njegov zahtev. Ima pristup sistemu, ali ne predstavlja zapošljeno lice u kompaniji ChooseFresh.
 		\item{\textbf{Administrator}} - objavljuje konkurs za snabdevače, pravi ugovor o saradnji sa snabdevačima i zapošljava nova lica. 
 		
-		U daljem tekstu pod terminom \textit{zapošljena lica} podrazumevamo dostavljača, magacionera i koordinatora, dok pod terminom \textit{korisnici} podrazumevamo sve aktere u sistemu. Na slici \ref{fig:context_diagram} prikazan je dijagram aktivnosti na kome su predstavljeni svi akteri sistema.
+		U daljem tekstu pod terminom \textit{zapošljena lica} podrazumevamo dostavljača, magacionera i koordinatora, dok pod terminom \textit{korisnici} podrazumevamo sve aktere u sistemu. Na slici \ref{fig:context_diagram} prikazan je dijagram konteksta na kome su predstavljeni svi akteri sistema.
 		
 				
 	\end{itemize}
@@ -42,7 +42,7 @@
 	\textbf{Nabavka namirnica}: Koordinator naručuje namirnice od snabdevača koji ih doprema do magacina, zatim magacioner raspoređuje primljene namirnice i vodi evidenciju o primljenim namirnicama.
 	
 	
-	\textbf{Prijava i registracija snabdevača}: Ovaj proces je drugačiji od registracije klijenta i zaposlenih jer zahteva dodatne podatke (izveštaj inspekcije, prijavu snabevača dobijenu apliciranjem snabdevača, i dokumentaciju snabdevača).
+	\textbf{Prijava i registracija snabdevača}: Ovaj proces je drugačiji od registracije klijenta i zaposlenih jer zahteva dodatne podatke (izveštaj inspekcije, prijavu snabdevača dobijenu apliciranjem snabdevača, i dokumentaciju snabdevača).
 
 
 \begin{figure}[H]
