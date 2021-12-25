@@ -11,7 +11,7 @@ Atributi:
     \item korisničkoIme 
     \item lozinka
     \item mejl
-    \item brojPlatneKartice
+    \item oznakaPlatneKartice
     \item statusPretplate
     \item adresaDostave
     \item datumDostave
@@ -21,17 +21,28 @@ Atributi:
     \item brojObroka
 \end{itemize}
 
-\textbf{\large Recept}
+\textbf{\large Obrok}
 \vspace{0.3cm}
 
-Klasa \textit{Recept} predstavlja jedan recept koji klijent može poručiti.
+Klasa \textit{Obrok} predstavlja jedan obrok koji klijent može poručiti.
 
 Atributi:
 \begin{itemize}
-    \item id - jedinstveni identifikator recepta (PK, automatski generisan)
-    \item namirnice - lista parova (id namirnice, količina namirnice potrebna za recept) (svaki id je SK koji referiše na Namirnice)
+    \item id - jedinstveni identifikator obroka (PK, automatski generisan)
     \item vremeIzrade
-    \item tipObroka - kom tipu obroka pripada recept
+    \item tipObroka - kom tipu obroka pripada
+\end{itemize}
+
+\textbf{\large Obrok\_Namirnice}
+\vspace{0.3cm}
+
+Klasa \textit{Obrok\_Namirnice} predstavlja veznu klasu (tabelu) između klasa Obrok i Namirnice.
+
+Atributi:
+\begin{itemize}
+    \item idNamirnice
+    \item idObroka
+    \item količinaNamirniceZaObrok
 \end{itemize}
 
 \textbf{\large Porudžbina}
@@ -43,5 +54,15 @@ Atributi:
 \begin{itemize}
     \item id - jedinstveni identifikator porudžbine (PK, automatski generisan)
     \item idKlijenta (SK koji referiše na Klijent)
-    \item recepti - lista id recepata (svaki id je SK koji referiše na Recept)
+\end{itemize}
+
+\textbf{\large Porudžbina\_Obrok}
+\vspace{0.3cm}
+
+Klasa \textit{Porudžbina\_Obrok} predstavlja veznu klasu (tabelu) između klasa Porudžbina i Obrok.
+
+Atributi:
+\begin{itemize}
+    \item idPorudžbine
+    \item idObroka
 \end{itemize}

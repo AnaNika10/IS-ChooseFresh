@@ -9,8 +9,7 @@ Atributi:
 \begin{itemize}
     \item id - jedinstveni identifikator namirnice (PK, automatski generisan)
     \item naziv 
-    \item spisakSnabdevača - spisak svih snabdevača koji imaju ovu namirnicu u ponudi. Elementi liste su id snabdevača (SK koji referiše na Snabdevača)
-    \item količina
+    \item stanjeUMagacinu
 \end{itemize}
 
 \textbf{\large Nabavka}
@@ -24,13 +23,25 @@ Atributi:
     \item idMagacionera - magacioner koji prima isporuku (SK koji referiše na Magacionera)
     \item idKoordinatora - koordinator koji je zakazao nabavku (SK koji referiše na Koordinatora)
     \item idSnabdevača - snabdevač koji dostavlja namirnice (SK koji referiše na Snabdevača) 
-    \item namirnice - spisak namirnica sa njihovim količinama koji se nalaze u jednoj nabavci. Prvi element para je id namirnice  (SK koji referiše na Namirnice).
+    \item zakazanoVremeNabavke: datum i vreme
 \end{itemize}
 
-\textbf{\large Dostavljanje paketa}
+\textbf{\large Nabavka\_Namirnice}
 \vspace{0.3cm}
 
-Klasa \textit{Dostavljanje paketa} predstavlja jednu dostavu paketa  koji je klijent poručio.
+Klasa \textit{Nabavka\_Namirnice} predstavlja veznu klasu (tabelu) između klasa Nabavka i Namirnice.
+
+Atributi:
+\begin{itemize}
+    \item idNabavke
+    \item idNamirnice
+    \item količinaZaNabavku
+\end{itemize}
+
+\textbf{\large Dostava paketa}
+\vspace{0.3cm}
+
+Klasa \textit{Dostava paketa} predstavlja jednu dostavu paketa koji je klijent poručio.
 
 Atributi:
 \begin{itemize}
@@ -39,4 +50,5 @@ Atributi:
     \item idPorudžbine - porudžbina koja treba da se upakuje i dostavi (SK koji referiše na Porudžbine)
     \item idMagacionera - magacioner koji pakuje porudžbinu (SK koji referiše na Magacionera)
     \item idDostavljača - dostavljač koji je zadužen za dostavu paketa do klijenta (SK koji referiše na Dostavljača)
+    \item realizovanoVremeDostave: datum i vreme
 \end{itemize}
