@@ -1,4 +1,3 @@
-
 \subsection{Podaci o zaposlenima i snabdevačima}
 
 \textbf{\large Zaposleni}
@@ -35,7 +34,6 @@ Atributi:
     \item mejl
     \item adresa
     \item brojTelefona
-    \item namirnice - lista id namirnica (svaki id je SK koji referiše na Namirnice)
 \end{itemize}
 
 \textbf{\large Ugovor}
@@ -50,4 +48,15 @@ Atributi:
     \item idSnabdevača - snabdevač koji je potpisao ugovor (SK koji referiše na Snabdevač)
     \item datumPotpisivanja
     \item dužinaTrajanja - broj meseci važenja ugovora
+\end{itemize}
+
+\textbf{\large {Snabdevač\_Namirnice}}
+\vspace{0.3cm}
+
+Klasa \textit{Snabdevač\_Namirnice} predstavlja veznu klasu (tabelu) između klasa Snabdevač i Namirnice.
+
+Atributi:
+\begin{itemize}
+    \item idSnabdevača
+    \item idNamirnice
 \end{itemize}
